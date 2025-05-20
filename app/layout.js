@@ -1,5 +1,6 @@
 import { Bellefair, Barlow, Barlow_Condensed } from "next/font/google";
 import "./globals.css";
+import Navbar from "@/components/navbar";
 
 const barlow = Barlow({
   subsets: ['latin'],
@@ -28,8 +29,9 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${barlow.variable} ${barlowConsended.variable} ${bellefair.variable} antialiased`}
       >
+        <Navbar />
         {children}
       </body>
     </html>
