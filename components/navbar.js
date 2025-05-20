@@ -1,13 +1,79 @@
+// components>/navbar.js
+// This is the navbar component
+'use client'
+
+
+import { useState } from "react";
+import { Menu, X} from "lucide-react";
+
 export default function Navbar() {
-    return (
-        <nav className="flex justify-between items-center p-6 pt-8 text-white bg-red-900">
-        <img src="/logo.svg" alt="Logo"/>
-        <ul className="flex space-x-4 caret-amber-200">
-            <li><a href="#home" className="hover:text-gray-400">Home</a></li>
-            <li><a href="#destination" className="hover:text-gray-400">Destination</a></li>
-            <li><a href="#crew" className="hover:text-gray-400">Crew</a></li>
-            <li><a href="#technology" className="hover:text-gray-400">Technology</a></li>
+
+
+  const [isOpen, setIsOpen] = useState(false);
+
+  return (
+    <nav className="fixed top-0 left-0 w-full flex justify-between items-center p-4 md:px-8 md:py-4 bg-opacity-60 z-10 pt-8 ">
+
+      {/* This is logo */}
+
+      <img src="/icon.svg" alt="Logo" className="w-fit"/>
+
+      {/* List of pages */}
+
+
+      <ul className=" space-x-8 backdrop-blur-xl pt-12 pb-12 pr-4 pl-48 hidden md:flex">
+        <li>
+          
+            <a className="text-white uppercase text-sm tracking-widest hover:border-b-2 hover:border-white">00 Home</a>
+          
+        </li>
+        <li>
+          
+            <a className="text-white uppercase text-sm tracking-widest hover:border-b-2 hover:border-white">01 Destination</a>
+         
+        </li>
+        <li>
+         
+            <a className="text-white uppercase text-sm tracking-widest hover:border-b-2 hover:border-white">02 Crew</a>
+          
+        </li>
+        <li>
+       
+            <a className="text-white uppercase text-sm tracking-widest hover:border-b-2 hover:border-white">03 Technology</a>
+         
+        </li>
+      </ul>
+
+      {/* Hamburger function for mobile */}
+
+      <button className="flex md:hidden" onClick={() => setIsOpen(!isOpen)}>
+        
+        
+        {isOpen ? <X size={42}/> : <Menu size={42}/>}
+
+
+      </button>
+
+      {/* Mobile Menu */}
+
+      {isOpen && (
+        <ul className="md:hidden absolute top-20 left-40 w-full backdrop-blur-3xl flex flex-col items-start gap-10 py-8 z-20 pt-20 pl-10 pb-150">
+
+          <li><a className="text-white uppercase text-sm tracking-widest">00 Home</a></li>
+
+          <li><a className="text-white uppercase text-sm tracking-widest">01 Destination</a></li>
+
+          <li><a className="text-white uppercase text-sm tracking-widest">02 Crew</a></li>
+
+          <li><a className="text-white uppercase text-sm tracking-widest">03 Technology</a></li>
+
         </ul>
-        </nav>
-    );
+      )}
+
+      
+    </nav>
+
+    
+  );
 }
+
