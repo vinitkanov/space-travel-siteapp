@@ -3,7 +3,7 @@ import ExploreButton from './ExploreButton';
 export default function Hero() {
   return (
     <section
-      className="pt-28 h-screen bg-cover bg-center text-white bg-no-repeat flex flex-col lg:flex-row items-center justify-center" 
+      className="pt-28 h-screen bg-cover bg-center text-white bg-no-repeat flex flex-col lg:flex-row items-center justify-center lg:justify-between lg:items-start lg:pl-24 lg:pr-24 lg:pt-0" 
       style={{ backgroundImage: "url('/bg-hero.png')" }}
     >
       <div className="not-first-of-type:max-w-md ml-8 items-center justify-center flex flex-col h-full md:items-baseline lg:justify-end lg:pb-24">
