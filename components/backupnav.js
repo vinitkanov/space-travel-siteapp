@@ -69,3 +69,65 @@ export default function Navbar() {
   );
 }
 
+
+
+
+// DESTINATION
+
+export default function (){
+    return (
+        <section>
+
+            <div className="flex-col justify-center h-screen pt-38 lg:flex-row">
+
+            <div className="flex gap-4 justify-center md:justify-start md:pl-20 md:pt-18">
+
+            <h1 className="text-gray-500 font-bellefair font-bold">
+                01 
+            </h1>
+            <h1>
+                PICK YOUR DESTINATION
+            </h1>
+
+            </div>
+
+            <div className="lg:flex justify-center ">
+
+            <div className="flex justify-center mt-10">
+            <img src="/destination-moon.png" alt="moon" />
+            
+            </div>
+ 
+
+            <div className="lg:max-w-lg">
+            <div className="flex justify-center mt-10 gap-4">
+                <h1 className="cursor-pointer">MOON</h1>
+                <h1 className="cursor-pointer">MARS</h1>
+                <h1 className="cursor-pointer">EUROPA</h1>
+                <h1 className="cursor-pointer">TITAN</h1>
+            </div>
+
+            <div className="mt-10 text-center">
+                <h1 className="text-6xl pb-4">MOON</h1>
+                
+                <p>See our planet as you’ve never seen it before. A perfect relaxing trip away to help regain perspective and come back refreshed. While you’re there, take in some history by visiting the Luna 2 and Apollo 11 landing sites.</p>
+                
+            </div>
+
+            <div className="lg:hidden justify-center h-px bg-gray-300 my-4" />
+
+            <div className="md:flex md:justify-center md:gap-32 md:mt-10">
+                <div>
+                    <h1 className="text-center">AVG. DISTANCE</h1>
+                    <h2 className="text-4xl text-center">384,400 km</h2>
+                </div>
+                <div>
+                    <h1 className="text-center">Est. travel time</h1>
+                    <h2 className="text-4xl text-center">3 days</h2>
+                </div>
+            </div></div>
+            </div></div>
+
+        </section>
+    )
+}

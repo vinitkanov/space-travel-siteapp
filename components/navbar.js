@@ -23,7 +23,7 @@ export default function Navbar() {
       {/* List of pages */}
 
 
-      <ul className=" space-x-8 backdrop-blur-xl pt-12 pb-12 pr-4 pl-48 hidden md:flex">
+      <ul className="space-x-8 backdrop-blur-2xl pt-12 pb-12 pr-4 pl-48 hidden md:flex">
         <li>
           
             <a className="text-white uppercase text-sm tracking-widest hover:border-b-2 hover:border-white cursor-pointer" href="/">00 Home</a>
