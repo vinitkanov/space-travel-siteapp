@@ -17,6 +17,7 @@ export default function Navbar() {
       {/* This is logo */}
 
       <img src="/icon.svg" alt="Logo" className="w-fit"/>
+      <img src="/headline.svg" className="hidden lg:block"/>
 
       {/* List of pages */}
 
