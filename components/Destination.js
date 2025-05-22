@@ -42,31 +42,60 @@ export default function DestinationPage() {
     return (
         <section className="bg-[url(/images/destination-bg.jpg)] min-h-screen bg-cover pt-40 px-5">
             <div className="container md:max-w-6xl m-auto">
+
+
+
                 <div className="page-title text-lg md:text-2xl condensed uppercase tracking-widest text-white pb-20">
                     <p><span className="mr-5 font-bold text-slate-500">01</span>Pick your destination</p>
                 </div>
-                <div className="flex flex-col lg:flex-row gap-5">
-                    <img src={destinations[activeContent].image} alt="" className="flex flex-1 max-w-[500px] " />
 
-                    <div className=" flex-1" >
-                        <div>
+
+
+
+
+                <div className="flex flex-col lg:flex-row gap-5">
+                    <img src={destinations[activeContent].image} alt="" className="flex flex-1 max-w-[500px]" />
+
+                    <div className="flex-1" >
+                        <div className="flex flex-row gap-5 pb-8 justify-center lg:justify-start">
                             {destinations.map((destinations, index) => {
                                 return (
-                                    <button key={index} onClick={() => setActiveContent(index)}>{destinations.planet}</button>
+                                    <button className="cursor-pointer" key={index} onClick={() => setActiveContent(index)}>{destinations.planet}</button>
                                 )
                             })}
                         </div>
 
-                        <div>
-                            <h1 className="uppercase text-7xl tracking-widest ">{destinations[activeContent].planet}</h1>
+                        <div className="flex flex-col gap-5 text-center lg:text-left">
+                            <h1 className="uppercase text-7xl tracking-widest pb-4">{destinations[activeContent].planet}</h1>
                             <p>{destinations[activeContent].description}</p>
+                        </div>
+
+                        <div className="hidden pb:flex justify-center h-px bg-gray-300 my-4" />
+                        <div className="flex justify-between mt-10 pb:flex-row pb:flex">
+                            <div>
+                                <h1 className="uppercase text-center">Avg. distance</h1>
+                                <h2 className="text-4xl text-center">{destinations[activeContent].distance}</h2>
+                            </div>
+                            <div>
+                                <h1 className="uppercase text-center">Est. travel time</h1>
+                                <h2 className="text-4xl text-center">{destinations[activeContent].travel_time}</h2>
+                            </div>
+
+
+
                         </div>
 
 
 
                     </div>
+
+
+
+
+
                 </div>
             </div>
         </section>
+        
     )
 }
