@@ -27,20 +27,24 @@ export default function Technology() {
 
     return(
         <section>
-            <div className="gap-2 flex flex-row items-center justify-center-safe  md:justify-start lg:hidden">
+            <div className="gap-2 pt-30 flex flex-row items-center justify-center-safe  md:justify-start lg:hidden md:pt-30">
                 <h1 className="uppercase text-sm tracking-widest text-center lg:text-left text-gray-500">03</h1>
                 <h1>SPACE LAUNCH 101</h1>
             </div>
 
             <div>
                 <div className="flex flex-col lg:flex-row gap-5">
-                    <img src={techList[activeContent].image} alt="img" className="flex" />
+                    <img src={techList[activeContent].image} alt="img" className="flex md:max-h-[500px]" />
                 </div>
-                <div className="pt-10 flex flex-row gap-5 pb-8 justify-center lg:justify-start lg:hidden">
+
+
+
+                
+                <div className="flex flex-row gap-5 pb-8 justify-center lg:justify-start lg:hidden md:pb-3">
                     {techList.map((tech, index) => {
                         return (
                             <button
-                                className="w-4 h-4 rounded border-white bg-transparent cursor-pointer"
+                                className="w-12 h-12 rounded-3xl border-gray-500 border-1 bg-transparent cursor-pointer"
                                 key={index}
                                 onClick={() => setActiveContent(index)}
                             >
@@ -50,9 +54,9 @@ export default function Technology() {
                     })}
                 </div>  
 
-                <div>
-                    <h1 className="uppercase text-xl tracking-widest pb-2">
-                        {/* Removed .role, since it doesn't exist */}
+                <div className="text-center">
+                    <h1 className="uppercase text-xl tracking-widest pb-2 text-gray-500">
+                        THE TERMINOLOGY…
                     </h1>
                     <h1 className="text-4xl">{techList[activeContent].name}</h1>
                     <p className="text-sm max-w-md text-blue-200">{techList[activeContent].description}</p>
