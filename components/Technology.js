@@ -32,9 +32,9 @@ export default function Technology() {
                 <h1>SPACE LAUNCH 101</h1>
             </div>
 
-            <div>
-                <div className="flex flex-col lg:flex-row gap-5">
-                    <img src={techList[activeContent].image} alt="img" className="flex md:max-h-[500px]" />
+            <div className="lg:flex">
+                <div>
+                    <img src={techList[activeContent].image} alt="img" className="pl-16 md:max-h-[500px] md:pl-14 lg:hidden max-h-[400px]" />
                 </div>
 
 
@@ -54,13 +54,38 @@ export default function Technology() {
                     })}
                 </div>  
 
-                <div className="text-center">
+                <div className="flex lg:pt-98">
+                <div className="hidden flex-col gap-5 pb-8 lg:flex md:pb-3 pr-14">
+
+                    {techList.map((tech, index) => {
+                        return (
+                            <button
+                                className="w-12 h-12 rounded-3xl border-gray-500 border-1 bg-transparent cursor-pointer"
+                                key={index}
+                                onClick={() => setActiveContent(index)}
+                            >
+                                {index + 1}
+                            </button>
+                        )
+                    })}
+
+                </div>  
+
+                <div className="text-center lg:text-left">
                     <h1 className="uppercase text-xl tracking-widest pb-2 text-gray-500">
                         THE TERMINOLOGY…
                     </h1>
                     <h1 className="text-4xl">{techList[activeContent].name}</h1>
-                    <p className="text-sm max-w-md text-blue-200">{techList[activeContent].description}</p>
+                    <p className="text-sm max-w-md text-blue-200 lg:pt-8">{techList[activeContent].description}</p>
+                </div></div>
+
+
+                <div>
+                    <img src={techList[activeContent].image} alt="img" className=" hidden lg:block" />
                 </div>
+
+                
+
             </div>
         </section>
     )
