@@ -12,7 +12,7 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 left-0 w-full flex justify-between items-center p-4 md:px-8 md:py-4 bg-opacity-60 z-10 pt-8 ">
+    <nav className="fixed top-0 left-0 w-full flex justify-between items-center p-4 md:px-8 md:py-4 bg-opacity-60 z-10 pt-8">
 
       {/* This is logo */}
       
@@ -23,7 +23,7 @@ export default function Navbar() {
       {/* List of pages */}
 
 
-      <ul className="space-x-8 backdrop-blur-2xl pt-12 pb-12 pr-4 pl-48 hidden md:flex">
+      <ul className="space-x-8 backdrop-blur-2xl pt-12 pb-12 pr-4 pl-48 hidden md:flex md:pb-8 md:pt-8">
         <li>
           
             <a className="text-white uppercase text-sm tracking-widest hover:border-b-2 hover:border-white cursor-pointer" href="/">00 Home</a>

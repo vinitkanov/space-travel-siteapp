@@ -32,21 +32,34 @@ export default function CrewPage() {
 
     return (
         <section>
-            <div className="container md:max-w-6xl m-auto pt-30">
+            <div className="pt-30 lg:flex lg:gap-98">
 
-                <div className="gap-4">
-                    <h1 className="uppercase text-sm tracking-widest text-center lg:text-left">02<span>MEET YOUR CREW</span></h1>
+                <div className="gap-2 flex flex-row items-center justify-center-safe  md:justify-start lg:hidden">
+                    <h1 className="uppercase text-sm tracking-widest text-center lg:text-left text-gray-500">02</h1>
+                    <h1>MEET YOUR CREW</h1>
                 </div>
 
+
+
+
+
+
+
+
                 <div className="flex flex-col gap-5 text-center lg:text-left">
-                            <h1 className="uppercase text-xl tracking-widest pb-4">
+                    
+                <div className="pb-30 gap-2 flex-row items-center justify-center-safe  md:justify-start hidden lg:flex">
+                    <h1 className="uppercase text-sm tracking-widest text-center lg:text-left text-gray-500">02</h1>
+                    <h1>MEET YOUR CREW</h1>
+                </div>
+
+                            <h1 className="uppercase text-xl tracking-widest pb-2">
                                 {crew[activeContent].role}</h1>
                             <h1 className="text-4xl">{crew[activeContent].name}</h1>
-                            <p className="text-sm max-w-md">{crew[activeContent].description}</p>
-                        </div>
+                            <p className="text-sm max-w-md text-blue-200">{crew[activeContent].description}</p>
 
 
-                        <div className="pt-10 flex flex-row gap-5 pb-8 justify-center lg:justify-start">
+                            <div className="pt-40 flex-row gap-4 hidden lg:block">
                             {crew.map((crew, index) => {
                                 return (
                                     <button className="cursor-pointer" key={index} onClick={() => setActiveContent(index)}>
@@ -55,7 +68,20 @@ export default function CrewPage() {
                                     </button>
                                 )
                             })}
-                        </div>  
+                </div>  
+                </div>
+
+
+                        <div className="pt-10 flex flex-row gap-5 pb-8 justify-center lg:justify-start lg:hidden">
+                            {crew.map((crew, index) => {
+                                return (
+                                    <button className="cursor-pointer" key={index} onClick={() => setActiveContent(index)}>
+                                        <div className="w-3 h-3 rounded-full bg-white"></div>
+
+                                    </button>
+                                )
+                            })}
+                </div>  
 
 
                 <div className="flex flex-col lg:flex-row gap-5">
