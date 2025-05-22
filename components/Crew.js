@@ -59,7 +59,7 @@ export default function CrewPage() {
                             <p className="text-sm max-w-md text-blue-200">{crew[activeContent].description}</p>
 
 
-                            <div className="pt-40 flex-row gap-4 hidden lg:block">
+                            <div className="pt-40 hidden gap-6 lg:flex">
                             {crew.map((crew, index) => {
                                 return (
                                     <button className="cursor-pointer" key={index} onClick={() => setActiveContent(index)}>
@@ -85,7 +85,7 @@ export default function CrewPage() {
 
 
                 <div className="flex flex-col lg:flex-row gap-5">
-                    <img src={crew[activeContent].image} alt="" className="flex flex-1 max-w-[500px] max-h-[550px]" />
+                    <img src={crew[activeContent].image} alt="img" className="flex flex-1 max-w-[500px] max-h-[550px]" />
                 </div>
 
 
